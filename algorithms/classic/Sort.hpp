@@ -1,9 +1,6 @@
 #pragma once
-#include "itf/Algorithm.hpp"
-
-class Sort : public Algorithm<int>
-{
+#include <algorithm>
+class Sort : public Algorithm {
 public:
-    std::string name() const override { return "BubbleSort"; }
-    void run(std::vector<int>& data) override;
+    nlohmann::json run(const nlohmann::json& config);
 };

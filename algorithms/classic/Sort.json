@@ -1,4 +1,7 @@
 {
   "type": "classic",
+  "validation": {
+    "method": "is_sorted"
+  },
   "data": [5, 2, 8, 1, 3]
 }

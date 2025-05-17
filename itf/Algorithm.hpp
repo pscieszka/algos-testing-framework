@@ -1,12 +1,8 @@
 #pragma once
-#include <vector>
-#include <string>
+#include <nlohmann/json.hpp>
 
-template <class T>
-class Algorithm 
-{
+class Algorithm {
 public:
-    virtual std::string name() const = 0;
-    virtual void run(std::vector<T>& data) = 0;
-    virtual ~Algorithm() = default;
+    virtual ~Algorithm() {}
+    virtual nlohmann::json run(const nlohmann::json& config) = 0;
 };

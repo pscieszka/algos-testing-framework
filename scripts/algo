@@ -9,7 +9,6 @@ if [[ "$COMMAND" == "build" ]]; then
     mkdir -p "$PROJECT_DIR/build/$NAME"
     g++ -std=c++17 -I"$PROJECT_DIR/include" -I"$PROJECT_DIR" \
         "$PROJECT_DIR/algorithms/classic/$NAME.cpp" \
-        "$PROJECT_DIR/src/framework.cpp" \
         "$PROJECT_DIR/src/main.cpp" \
         -o "$PROJECT_DIR/build/$NAME/$NAME"
 

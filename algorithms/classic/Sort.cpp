@@ -1,8 +1,17 @@
-#include "Sort.hpp"
-#include <algorithm>
+#include "itf/Algorithm.hpp"
+#include "itf/Registry.hpp"
 #include <vector>
+#include <algorithm>
+#include <iostream>
 
-void Sort::run(std::vector<int>& data)
-{
-    std::sort(data.begin(), data.end());
-}
+
+class Sort : public Algorithm {
+public:
+    nlohmann::json run(const nlohmann::json& config) override {
+        std::vector<int> input = config["data"].get<std::vector<int>>();
+        std::sort(input.begin(), input.end());
+        return {{"output", input}};
+    }
+};
+
+REGISTER_ALGORITHM(Sort)
