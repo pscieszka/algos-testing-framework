@@ -1,0 +1,14 @@
+.vscode/
+build/
+bin/
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*~
+*.log
+*.cache
